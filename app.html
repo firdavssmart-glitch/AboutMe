@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Olimov Firdavs — Web Developer</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#0f5fff;
+      --glass: rgba(255,255,255,0.6);
+      --shadow: 0 6px 20px rgba(20,24,40,0.08);
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,var(--bg),#eef3fb);
+      color:#0b1220;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      font-size:16px;
+    }
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{
+      width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#5ec0ff);display:grid;place-items:center;color:white;font-weight:700;box-shadow:var(--shadow)
+    }
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    .btn-primary{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(15,95,255,0.12)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:30px;align-items:center;margin-top:18px}
+    .hero-card{background:var(--card);padding:36px;border-radius:14px;box-shadow:var(--shadow)}
+    h1{margin:0;font-size:28px;line-height:1.05}
+    p.lead{color:var(--muted);margin-top:12px}
+    .hero-cta{display:flex;gap:12px;margin-top:18px}
+
+    /* About & Skills */
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+    .card{background:var(--card);padding:22px;border-radius:12px;box-shadow:var(--shadow)}
+    .skills{display:flex;flex-direction:column;gap:10px}
+    .skill{display:flex;justify-content:space-between;align-items:center}
+    .progress{height:10px;background:#eef2ff;border-radius:8px;overflow:hidden;margin-top:8px}
+    .progress > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#2ac7ff)}
+
+    /* Projects */
+    .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
+    .project{padding:14px;border-radius:10px;background:linear-gradient(180deg,rgba(15,95,255,0.03),transparent);border:1px solid rgba(15,95,255,0.06)}
+    .project h3{margin:0 0 8px 0}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+    .project .tags{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+    .tag{background:rgba(11,18,32,0.04);padding:6px 8px;border-radius:8px;font-weight:600;font-size:13px;color:var(--muted)}
+
+    /* Contact */
+    form .row{display:flex;gap:12px}
+    input,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid #e6e9f2;background:transparent}
+    textarea{min-height:120px;resize:vertical}
+    .muted{color:var(--muted);font-size:14px}
+
+    footer{margin-top:28px;padding:18px 0;color:var(--muted);text-align:center}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .projects-grid{grid-template-columns:1fr}
+      nav{display:none}
+    }
+
+    /* small utilities */
+    .flex{display:flex;align-items:center}
+    .space{height:18px}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">OF</div>
+        <div>
+          <div style="font-weight:800">Olimov Firdavs</div>
+          <div class="muted" style="font-size:13px">Web Developer</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="btn-primary">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Professional, reliable websites that help businesses grow.</h1>
+        <p class="lead">Hi — I'm <strong>Olimov Firdavs</strong>, a Web Developer who builds responsive, accessible websites using HTML, CSS, JavaScript and Python. I focus on clear design, performance, and results.</p>
+
+        <div class="hero-cta">
+          <a href="#contact" class="btn-primary">Hire me</a>
+          <a href="#projects" style="padding:10px 14px;border-radius:10px;border:1px solid rgba(11,18,32,0.06);text-decoration:none;font-weight:700">See projects</a>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+          <div class="card" style="padding:12px;min-width:130px">Availability<div class="muted" style="margin-top:6px">Open to freelance projects</div></div>
+          <div class="card" style="padding:12px;min-width:130px">Location<div class="muted" style="margin-top:6px">Uzbekistan</div></div>
+        </div>
+      </div>
+
+      <aside style="width:100%">
+        <div class="card">
+          <h3 style="margin-top:0">About me</h3>
+          <p class="muted">I create practical, business-focused websites — from landing pages to small business sites. I pay attention to good UX, accessibility and loading speed.</p>
+
+          <div class="space"></div>
+
+          <h4 style="margin:0 0 8px 0">Skills</h4>
+          <div class="skills">
+            <div>
+              <div class="skill"><span>HTML</span><strong>95%</strong></div>
+              <div class="progress"><i style="width:95%"></i></div>
+            </div>
+            <div>
+              <div class="skill"><span>CSS</span><strong>90%</strong></div>
+              <div class="progress"><i style="width:90%"></i></div>
+            </div>
+            <div>
+              <div class="skill"><span>JavaScript</span><strong>80%</strong></div>
+              <div class="progress"><i style="width:80%"></i></div>
+            </div>
+            <div>
+              <div class="skill"><span>Python</span><strong>70%</strong></div>
+              <div class="progress"><i style="width:70%"></i></div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="projects">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-top:24px">
+        <h2 style="margin:0">Selected Projects</h2>
+        <div class="muted">A few recent demos and client sites</div>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project">
+          <h3>Local Café — Landing Page</h3>
+          <p>Responsive landing page with menu, contact form and simple booking widget. Built with HTML/CSS and vanilla JS.</p>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
+        </div>
+
+        <div class="project">
+          <h3>Portfolio Template</h3>
+          <p>A clean, minimal template for creatives. Includes responsive grid and smooth animations.</p>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span></div>
+        </div>
+
+        <div class="project">
+          <h3>Small Shop — Product Page</h3>
+          <p>Static product page with simple cart behavior. Optimized images and fast load times.</p>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">JS</span></div>
+        </div>
+
+        <div class="project">
+          <h3>Contact Manager — Backend Demo</h3>
+          <p>Prototype REST API built with Python (Flask) and static frontend to demonstrate CRUD behavior.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">HTML</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:24px">
+      <div class="card">
+        <h2 style="margin-top:0">Contact</h2>
+        <p class="muted">Want to work together? Send a message and I will reply within 48 hours.</p>
+
+        <form id="contactForm" onsubmit="submitForm(event)">
+          <div class="row">
+            <div style="flex:1">
+              <label class="muted">Name</label>
+              <input id="name" placeholder="Your name" required />
+            </div>
+            <div style="flex:1">
+              <label class="muted">Email</label>
+              <input id="email" type="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+
+          <div style="margin-top:12px">
+            <label class="muted">Message</label>
+            <textarea id="message" placeholder="Short description of the project" required></textarea>
+          </div>
+
+          <div style="margin-top:12px;display:flex;gap:12px;align-items:center">
+            <button type="submit" class="btn-primary">Send message</button>
+            <div id="formState" class="muted">Or email me at <strong>olimon@example.com</strong></div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Olimov Firdavs — Web Developer • Built with HTML, CSS & JavaScript
+    </footer>
+  </div>
+
+  <script>
+    // fill year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // basic contact form handling (no backend) — shows success message and prepares mailto fallback
+    function submitForm(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const state = document.getElementById('formState');
+
+      if(!name || !email || !message){
+        state.textContent = 'Please fill all fields.';
+        return;
+      }
+
+      // show quick success
+      state.textContent = 'Thanks — your message looks good. Preparing email...';
+
+      // open mail client as fallback
+      const subject = encodeURIComponent('Portfolio inquiry from ' + name);
+      const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+      window.location.href = `mailto:olimon@example.com?subject=${subject}&body=${body}`;
+
+      setTimeout(()=>{
+        state.textContent = 'If your mail client did not open, copy this email: olimon@example.com';
+        document.getElementById('contactForm').reset();
+      },800);
+    }
+  </script>
+</body>
+</html>
